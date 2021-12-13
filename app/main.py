@@ -1,9 +1,8 @@
 import uvicorn
-from fastapi import FastAPI
-
-from database_utils.database import engine
-from user.models.user import Base
 from api.endpoints.user import users_router
+from database_utils.database import engine
+from fastapi import FastAPI
+from user.models.user_model import Base
 
 app = FastAPI()
 app.include_router(users_router)
