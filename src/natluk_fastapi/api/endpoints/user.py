@@ -1,13 +1,13 @@
 from sqlalchemy.orm import Session
 from fastapi import Depends, APIRouter, Path, Response
-import schemas
-import services
-from database import get_db
+from natluk_fastapi.user import schemas
+from natluk_fastapi.user import services
+from database_utils.database import get_db
 
 users_router = APIRouter(prefix="/user", tags=["Users"])
 
 
-@users_router.get("/all", response_model=list[schemas.UserOut], tags=["AllUsers"])
+@users_router.get("/all", response_model=list[schemas.user.UserOut], tags=["AllUsers"])
 def read_all_users(db: Session = Depends(get_db)):
     return services.read_all(db)
 

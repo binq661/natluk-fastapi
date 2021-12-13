@@ -8,7 +8,7 @@ class Person(BaseModel):
     surname: Optional[str]
     personal_email: EmailStr
     birth_date: date
-    money: Union[int, float] # [float, int]
+    money: Union[int, float]  # [float, int]
     kids_count: int = 0
 
 
@@ -19,4 +19,3 @@ instance = Person(money="1", kids_count=0)
 print(instance.dict(exclude_unset=True))
 
 print(instance.dict(exclude_defaults=True))
-

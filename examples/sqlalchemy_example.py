@@ -19,6 +19,7 @@ class Item(Base):
     name = Column(String, unique=True, index=True)
     value = Column(Integer)
 
+
 Base.metadata.create_all(bind=engine)
 
 item = Item(name="Item10", value=10000)
@@ -36,7 +37,10 @@ for row in db.query(Item).all():
     print(row.__dict__)
 
 item_db = db.query(Item).filter_by(id=item.id)
-print("XDDDDDDDDDDDDDDDDDDD", item.id,)
+print(
+    "XDDDDDDDDDDDDDDDDDDD",
+    item.id,
+)
 item_db.delete()
 db.commit()
 print("__________________________")

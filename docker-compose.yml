@@ -3,9 +3,9 @@ version: "3.3"
 services:
   web:
     build: .
-    command: python src/main.py
+    command: python natluk_fastapi/main.py
     volumes:
-      - .:/app
+      - .:/app/src
     ports:
       - "8000:8000"
     depends_on:
