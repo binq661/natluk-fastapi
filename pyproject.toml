@@ -22,7 +22,8 @@ isort = "*"
 ipdb = "*"
 pylint = "*"
 flake8 = "*"
-
+tox = "*"
+pytest = "*"
 
 [tool.black]
 line-length = 88
@@ -32,6 +33,12 @@ include = '\.pyi?$'
 
 [tool.isort]
 profile = "black"
+line_length=88
+use_parentheses=true
+multi_line_output=3
+lines_between_types=1
+include_trailing_comma=true
+force_grid_wrap=0
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

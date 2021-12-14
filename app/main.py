@@ -1,4 +1,5 @@
 import uvicorn
+
 from api.endpoints.user import users_router
 from fastapi import FastAPI
 
