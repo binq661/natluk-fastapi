@@ -1,7 +1,6 @@
 from database_utils.hashing import hash_password
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
-from user import schemas
 from user.models.user_model import User
 from user.schemas import user_schemas
 
