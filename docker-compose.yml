@@ -3,7 +3,7 @@ version: "3.3"
 services:
   web:
     build: .
-    command: python app/main.py
+    command: bash -c "alembic upgrade head && python app/main.py"
     volumes:
       - .:/app
     ports:

@@ -10,8 +10,10 @@ pydantic = {version="==1.8.2", extras=["email"]}
 fastapi = "^0.70.0"
 uvicorn = "^0.16.0"
 SQLAlchemy = "==1.4.27"
+alembic = "==1.7.5"
 psycopg2-binary = "==2.9.2"
 passlib = "==1.7.4"
+python-dotenv = "0.19.2"
 
 [tool.poetry.dev-dependencies]
 black = "*"
@@ -25,14 +27,7 @@ flake8 = "*"
 line-length = 88
 target-version = ['py37', 'py38', 'py39', 'py310']
 include = '\.pyi?$'
-extend-exclude = '''
-/(
-  # The following are specific to Black, you probably don't want those.
-  | blib2to3
-  | tests/data
-  | profiling
-)/
-'''
+
 
 [tool.isort]
 profile = "black"
