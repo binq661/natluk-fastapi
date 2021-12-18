@@ -10,12 +10,35 @@ pydantic = {version="==1.8.2", extras=["email"]}
 fastapi = "^0.70.0"
 uvicorn = "^0.16.0"
 SQLAlchemy = "==1.4.27"
+alembic = "==1.7.5"
 psycopg2-binary = "==2.9.2"
 passlib = "==1.7.4"
+python-dotenv = "==0.19.2"
+fastapi_sqlalchemy = "==0.2.1"
 
 [tool.poetry.dev-dependencies]
 black = "*"
+isort = "*"
 ipdb = "*"
+pylint = "*"
+flake8 = "*"
+tox = "*"
+pytest = "*"
+
+[tool.black]
+line-length = 88
+target-version = ['py37', 'py38', 'py39', 'py310']
+include = '\.pyi?$'
+
+
+[tool.isort]
+profile = "black"
+line_length=88
+use_parentheses=true
+multi_line_output=3
+lines_between_types=1
+include_trailing_comma=true
+force_grid_wrap=0
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
